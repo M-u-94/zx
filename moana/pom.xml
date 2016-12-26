@@ -1,0 +1,309 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+  <groupId>moana</groupId>
+  <artifactId>moana</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.3</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <warSourceDirectory>WebRoot</warSourceDirectory>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+      <plugin>
+      	<groupId>json</groupId>
+      	<artifactId>json-lib</artifactId>
+      	<version>2.3</version>
+      </plugin>
+    </plugins>
+  </build>
+  
+ <!--   <modelVersion>4.0.0</modelVersion> 
+<groupId>org.springframework</groupId>
+<artifactId>spring-beans</artifactId>
+<version>4.2.2.RELEASE</version>
+<name>Spring Beans</name>
+<description>Spring Beans</description>
+<url>
+https://github.com/spring-projects/spring-framework
+</url>
+<organization>
+<name>Spring IO</name>
+<url>http://projects.spring.io/spring-framework</url>
+</organization>
+<licenses>
+<license>
+<name>The Apache Software License, Version 2.0</name>
+<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+<distribution>repo</distribution>
+</license>
+</licenses>
+<developers>
+<developer>
+<id>jhoeller</id>
+<name>Juergen Hoeller</name>
+<email>jhoeller@pivotal.io</email>
+</developer>
+</developers>
+<scm>
+<connection>
+scm:git:git://github.com/spring-projects/spring-framework
+</connection>
+<developerConnection>
+scm:git:git://github.com/spring-projects/spring-framework
+</developerConnection>
+<url>
+https://github.com/spring-projects/spring-framework
+</url>
+</scm>
+<issueManagement>
+<system>Jira</system>
+<url>https://jira.springsource.org/browse/SPR</url>
+</issueManagement>  -->
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>javax.persistence</groupId>
+  		<artifactId>persistence</artifactId>
+  		<version>2.1.3</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\Datanucleus\jar\deps\javax.persistence-2.1.3.jar</systemPath>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>eclpiselinkGID</groupId>
+  		<artifactId>eclpiselink</artifactId>
+  		<version>2.6.2</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\Datanucleus\eclipselink-2.6.2.v20151217-774c696\eclipselink\jlib\eclipselink.jar</systemPath>
+  	</dependency>
+  	<dependency>
+  		<groupId>ezmorph</groupId>
+  		<artifactId>ezmorph</artifactId>
+  		<version>1.0.6</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\lib\ezmorph-1.0.6.jar</systemPath>
+  	</dependency>
+
+  	<dependency>
+  		<groupId>struts2-json</groupId>
+  		<artifactId>json-plugin</artifactId>
+  		<version>2.3.12</version>
+  		<scope>system</scope>
+  		<systemPath>D:\UI\Json\struts2-json-plugin-2.3.12.jar\struts2-json-plugin-2.3.12.jar</systemPath>
+  	</dependency>
+  	<dependency>
+  		<groupId>mariadb-java</groupId>
+  		<artifactId>client</artifactId>
+  		<version>1.5.4</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\Mariadb\mariadb-java-client-1.5.4.jar</systemPath>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>jedis</groupId>
+  		<artifactId>jedis</artifactId>
+  		<version>2.0.0</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\jedis\jedis-2.0.0.jar\jedis-2.0.0.jar</systemPath>
+  	</dependency>
+  	
+   <!-- spring-4.2.2 --> 
+    <dependency>
+<groupId>javax.el</groupId>
+<artifactId>javax.el-api</artifactId>
+<version>2.2.5</version>
+<scope>compile</scope>
+<optional>true</optional>
+</dependency>
+<dependency>
+<groupId>javax.inject</groupId>
+<artifactId>javax.inject</artifactId>
+<version>1</version>
+<scope>compile</scope>
+<optional>true</optional>
+</dependency>
+<dependency>
+<groupId>org.codehaus.groovy</groupId>
+<artifactId>groovy-all</artifactId>
+<version>2.4.5</version>
+<scope>compile</scope>
+<optional>true</optional>
+</dependency>
+<dependency>
+<groupId>org.springframework</groupId>
+<artifactId>spring-core</artifactId>
+<version>4.2.2.RELEASE</version>
+<scope>compile</scope>
+</dependency>
+<dependency>
+<groupId>org.yaml</groupId>
+<artifactId>snakeyaml</artifactId>
+<version>1.16</version>
+<scope>compile</scope>
+<optional>true</optional>
+</dependency>
+
+<!-- struts2-2.3.20.3 -->
+
+
+
+
+  	<dependency>
+  		<groupId>asm</groupId>
+  		<artifactId>asm</artifactId>
+  		<version>5.0.2</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\apps\struts2-blank\WEB-INF\lib\asm-5.0.2.jar</systemPath>
+  	</dependency>
+  	<dependency>
+  		<groupId>asm-commons</groupId>
+  		<artifactId>asm-commons</artifactId>
+  		<version>5.0.2</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\apps\struts2-blank\WEB-INF\lib\asm-commons-5.0.2.jar</systemPath>
+  	</dependency>
+  	<dependency>
+  		<groupId>asm-tree</groupId>
+  		<artifactId>asm-tree</artifactId>
+  		<version>5.0.2</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\apps\struts2-blank\WEB-INF\lib\asm-tree-5.0.2.jar</systemPath>
+  	</dependency>
+  	<dependency>
+  		<groupId>commons-fileupdown</groupId>
+  		<artifactId>commons-fileupdown</artifactId>
+  		<version>1.3.1</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\apps\struts2-blank\WEB-INF\lib\commons-fileupload-1.3.1.jar</systemPath>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>commons-io</groupId>
+  		<artifactId>commons-io</artifactId>
+  		<version>2.2</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\apps\struts2-blank\WEB-INF\lib\commons-io-2.2.jar</systemPath>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>commons-langs3</groupId>
+  		<artifactId>langs3</artifactId>
+  		<version>3.2</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\apps\struts2-blank\WEB-INF\lib\commons-lang3-3.2.jar</systemPath>
+  	</dependency>
+  	<dependency>
+  		<groupId>freemarker</groupId>
+  		<artifactId>freemarker</artifactId>
+  		<version>2.3.19</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\apps\struts2-blank\WEB-INF\lib\freemarker-2.3.19.jar</systemPath>
+  	</dependency>
+  	<dependency>
+  		<groupId>javassist</groupId>
+  		<artifactId>javassist</artifactId>
+  		<version>3.11.0.GA</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\apps\struts2-blank\WEB-INF\lib\javassist-3.11.0.GA.jar</systemPath>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>log4j</groupId>
+  		<artifactId>log4j</artifactId>
+  		<version>1.2.17</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\apps\struts2-blank\WEB-INF\lib\log4j-1.2.17.jar</systemPath>
+  	</dependency>
+  	<dependency>
+  		<groupId>ognl</groupId>
+  		<artifactId>ognl</artifactId>
+  		<version>3.0.6</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\apps\struts2-blank\WEB-INF\lib\ognl-3.0.6.1.jar</systemPath>
+  	</dependency>
+  	<dependency>
+  		<groupId>struts-core</groupId>
+  		<artifactId>core</artifactId>
+  		<version>2.3.20.3</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\apps\struts2-blank\WEB-INF\lib\struts2-core-2.3.20.3.jar</systemPath>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>json-lib</groupId>
+  		<artifactId>json-lib</artifactId>
+  		<version>2.3-jdk15</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\lib\json-lib-2.3-jdk15.jar</systemPath>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>commons-lang</groupId>
+  		<artifactId>lang</artifactId>
+  		<version>2.4</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\lib\commons-lang-2.4.jar</systemPath>
+  	</dependency>
+  	<dependency>
+  		<groupId>commons-collections</groupId>
+  		<artifactId>collections</artifactId>
+  		<version>3.1</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\lib\commons-collections-3.1.jar</systemPath>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>commons-beanutils</groupId>
+  		<artifactId>beanutils</artifactId>
+  		<version>1.8.0</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\lib\commons-beanutils-1.8.0.jar</systemPath>
+  	</dependency>
+  	<dependency>
+  		<groupId>commons-chains</groupId>
+  		<artifactId>chains</artifactId>
+  		<version>1.2</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\lib\commons-chain-1.2.jar</systemPath>
+  	</dependency>
+  	<dependency>
+  		<groupId>commons-digester</groupId>
+  		<artifactId>digester</artifactId>
+  		<version>2.0</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\lib\commons-digester-2.0.jar</systemPath>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>commons-validator</groupId>
+  		<artifactId>validator</artifactId>
+  		<version>1.3</version>
+  		<scope>system</scope>
+  		<systemPath>D:\JAVA\myFramework\struts2\struts-2.3.20.3\lib\commons-validator-1.3.1.jar</systemPath>
+  	</dependency>
+  	
+  </dependencies>
+
+</project>

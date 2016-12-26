@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<package name="default" namespace="/p1" extends="struts-default">
+		<action name="login" class="lab.io.rush.action.LoginAction"
+			method="userLogin">
+			<result name="success">/WEB-INF/jsp/login_success.jsp</result>
+			<result name="error">/WEB-INF/jsp/login_fail.jsp</result>
+		</action>
+
+		<action name="grabTickets" class="lab.io.rush.action.GrabTicketsAction"
+			method="bookingTickets">
+			<result name="success">/WEB-INF/jsp/booking_success.jsp</result>
+			<result name="error">/WEB-INF/jsp/booking_fail.jsp</result>
+		</action>
+
+	</package>
+
+	<package name="refresh" namespace="/p2" extends="json-default">
+		<action name="refreshAction2" class="lab.io.rush.action.RefreshDataAction" method="refreshData">
+			<result type="json">
+				<param name="root">jsonObject</param>
+			</result>
+		</action>
+	</package>
+</struts>
